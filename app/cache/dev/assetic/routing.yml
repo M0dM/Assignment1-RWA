@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /var/www/RWA/Assignment1/Assignment1-RWA/app/config/routing_dev.yml

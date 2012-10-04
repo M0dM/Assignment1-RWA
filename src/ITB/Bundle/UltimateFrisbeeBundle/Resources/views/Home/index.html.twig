@@ -1,0 +1,13 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	<ul class="imageRotatorPlaceholder">
+		<!-- TODO: add routing path('') -->
+		<li><a href="#" name="ultimatePresentationImage"><img src="{{ asset('images/image1.jpg') }}" alt="image accordion ultimate"/></a></li>
+		<li><a href="#" name="productsImage"><img src="{{ asset('images/image2.jpg') }}" alt="image accordion products"/></a></li>
+		<li><a href="#" name="forumImage"><img src="{{ asset('images/image3.jpg') }}" alt="image accordion forum"/></a></li>
+	</ul>
+	<h1>TestPage : Test bootstrap</h1>
+	<a href="{{ path('uf_home') }}">Home Page</a>
+	<a href="{{ path('uf_hello') }}">Hello page</a>
+{% endblock %}

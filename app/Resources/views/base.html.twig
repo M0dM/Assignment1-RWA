@@ -2,12 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}Ultimate frisbee shop{% endblock %}</title>
+        {% block stylesheets %}
+        	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/ultimateFrisbeeBundle/Resources/public/css/bootstrap/css/bootstrap.css') }}" />
+			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/ultimateFrisbeeBundle/Resources/public/css/ultimateFrisbee.css') }}" />
+    	{% endblock %}
+        {% block javascript %}
+       		<script type="text/javascript" src="{{ asset('bundles/ultimateFrisbeeBundle/Resources/public/js/jquery-1.8.2.js') }}"></script>
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+    	<div class="navbar">
+		    <div class="navbar-inner">
+			    <div class="span12 uf-nav">
+			    <a class="brand" href="{{ path("uf_home") }}">Ultimate frisbee shop</a>
+				    <ul class="nav">
+				    <li><a href="#">The sport</a></li>
+				    <li><a href="#">Products</a></li>
+				    <li><a href="#">Forum</a></li>
+				    <li><a href="#">Contact</a></li>
+				    </ul>
+			    </div>
+		    </div>
+		</div>
+		<div class="main span12">
+	        {% block body %}{% endblock %}
+	    </div>
     </body>
 </html>

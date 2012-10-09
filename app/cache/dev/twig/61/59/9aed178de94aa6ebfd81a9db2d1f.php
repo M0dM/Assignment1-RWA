@@ -35,7 +35,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
         echo "        ";
         $this->displayBlock('javascript', $context, $blocks);
         // line 13
-        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
+        echo "    \t<link rel=\"shortcut icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
     </head>
@@ -78,11 +78,11 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
     {
         // line 7
         echo "        \t<link rel=\"stylesheet\" type=\"text/css\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ultimateFrisbeeBundle/Resources/public/css/bootstrap/css/bootstrap.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.css"), "html", null, true);
         echo "\" />
 \t\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"";
         // line 8
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ultimateFrisbeeBundle/Resources/public/css/ultimateFrisbee.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/itbultimatefrisbee/css/ultimateFrisbee.css"), "html", null, true);
         echo "\" />
     \t";
     }
@@ -92,7 +92,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
     {
         // line 11
         echo "       \t\t<script type=\"text/javascript\" src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/ultimateFrisbeeBundle/Resources/public/js/jquery-1.8.2.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/itbultimatefrisbee/js/jquery-1.8.2.js"), "html", null, true);
         echo "\"></script>
         ";
     }

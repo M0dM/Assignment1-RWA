@@ -1,17 +1,20 @@
 {% extends '::base.html.twig' %}
 
 {% block javascript %}
+	{{ parent() }}
 	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/accordion.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-	<ul class="imageRotatorPlaceholder">
-		<!-- TODO: add routing path('') -->
-		<li><a href="#"><img name="ultimatePresentationImage" src="{{ asset('images/image1.jpg') }}" alt="image accordion ultimate"/></a></li>
-		<li><a href="#"><img name="productsImage" src="{{ asset('images/image2.jpg') }}" alt="image accordion products"/></a></li>
-		<li><a href="#"><img name="forumImage" src="{{ asset('images/image3.jpg') }}" alt="image accordion forum"/></a></li>
-	</ul>
-	<h1>TestPage : Test bootstrap</h1>
+	<div class="imageRotatorPlaceholder">
+		<ul>
+			<!-- TODO: add routing path('') -->
+			<li><a href="#"><img name="ultimatePresentationImage" src="{{ asset('images/image1.jpg') }}" alt="image accordion ultimate"/></a></li>
+			<li><a href="#"><img name="productsImage" src="{{ asset('images/image2.jpg') }}" alt="image accordion products"/></a></li>
+			<li><a href="#"><img name="forumImage" src="{{ asset('images/image3.jpg') }}" alt="image accordion forum"/></a></li>
+		</ul>
+	</div>
+	<h1 class="titleUnderAccordion">TestPage : Test bootstrap</h1>
 	<a href="{{ path('uf_home') }}">Home Page</a>
 	<a href="{{ path('uf_hello') }}">Hello page</a>
 {% endblock %}

@@ -1,11 +1,14 @@
 {% extends '::base.html.twig' %}
 {% block body %}
+        {% block fos_user_content %}
+        {% endblock fos_user_content %}
         <div>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                Logged as {'%username%': app.user.username}
-                <a href="{{ path('fos_user_security_logout') }}">
-                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-                </a>
+            	<p style="display: block; float: left; margin-right: 20px;">
+                Logged as <strong>{{ app.user.username }}</strong>
+                <br />
+                </p>
+                <a style="display: block; float: left;" href="{{ path('fos_user_security_logout') }}">Click to logout</a>
             {% endif %}
         </div>
 
@@ -14,9 +17,4 @@
             Message
         </div>
         {% endfor %}
-
-        <div>
-            {% block fos_user_content %}
-            {% endblock fos_user_content %}
-        </div>
 {% endblock %}

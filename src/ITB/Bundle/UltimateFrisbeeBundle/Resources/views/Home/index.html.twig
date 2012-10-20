@@ -1,8 +1,13 @@
 {% extends '::base.html.twig' %}
 
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFimageRotator.css') }}" />
+{% endblock %}
+
 {% block javascript %}
 	{{ parent() }}
-	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/accordion.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFimageRotator.js') }}"></script>
 {% endblock %}
 
 {% block body %}

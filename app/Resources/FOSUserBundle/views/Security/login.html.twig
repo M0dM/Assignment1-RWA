@@ -7,7 +7,6 @@
 
 <form action="{{ path("fos_user_security_check") }}" method="post" class="form-horizontal">
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-    <p class="alert alert-danger">{{ form_errors(form) }}</p>
  	<div class="control-group">
     	<label class="control-label" for="inputUsername">Username</label>
     	<div class="controls">

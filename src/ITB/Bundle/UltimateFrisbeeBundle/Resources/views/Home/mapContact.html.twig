@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB63qafV6Bfx0_FOHEtFTJNQXp7j4_wnhQ&sensor=false"></script>
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/plugins/TilotitijQueryGoogleMap/jquery.googlemap.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<h1 class="titleUnderAccordion">Contacts </h1>
+	<ul class="nav nav-tabs">
+      <li><a href="{{path('uf_contact')}}">Mail references</a></li>
+      <li class="active"><a href="{{path("uf_map")}}">Map</a></li>
+    </ul>
+{% endblock %}

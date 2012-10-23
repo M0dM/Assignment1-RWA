@@ -21,13 +21,13 @@ $("document").ready(function(){
 		$(this).animate({
 			opacity: 0.8,
 			bgColor: "white",
-		}, 100 );
+		}, 400 );
 	});
 	
 	$(".imageRotatorPlaceholder .imageRotatorSmallImages img").live("mouseleave",function(){
 		$(this).animate({
 			opacity: 1,	
-		}, 100 );
+		}, 400 );
 	});
 	
 	$(".imageRotatorSmallImages img").live("click", function(){
@@ -44,20 +44,20 @@ $("document").ready(function(){
 
 function refreshimageRotator(index, links, names, urls, isFirstTime){
 	
-	//removing old imageRotator
-	$(".imageRotatorImageCurent").remove();
-	$(".imageRotatorSmallImages").remove();
+		//removing old imageRotator
+		$(".imageRotatorImageCurent").remove();
+		$(".imageRotatorSmallImages").remove();
+		
+		// Defining the size of the imageRotator
+		$(".imageRotatorPlaceholder").css("height", "260px");
+		$(".imageRotatorPlaceholder").append('<div class="imageRotatorImageCurent">');
+		$(".imageRotatorPlaceholder .imageRotatorImageCurent").append('<a href="'+ "http://google.fr" +'"><img id="curent" src="'+links[index]+'" alt="'+names[index]+'" /></a>' );
+		$(".imageRotatorPlaceholder").append('<div class="imageRotatorSmallImages">');
 
-	// Defining the size of the imageRotator
-	$(".imageRotatorPlaceholder").css("height", "260px");
-	$(".imageRotatorPlaceholder").append('<div class="imageRotatorImageCurent">');
-	$(".imageRotatorPlaceholder .imageRotatorImageCurent").append('<a href="'+ "http://google.fr" +'"><img id="curent" src="'+links[index]+'" alt="'+names[index]+'" /></a>' );
-	$(".imageRotatorPlaceholder").append('<div class="imageRotatorSmallImages">');
-
-	//adding the small images after the current image in the links array
-	var i = 0;
-	while(i < links.length){
-		$(".imageRotatorPlaceholder .imageRotatorSmallImages").append('<img imageId="'+ i +'" src="'+links[i]+'" alt="'+names[i]+'"/>' );
-		i++;
-	}
+		//adding the small images after the current image in the links array
+		var i = 0;
+		while(i < links.length){
+			$(".imageRotatorPlaceholder .imageRotatorSmallImages").append('<img imageId="'+ i +'" src="'+links[i]+'" alt="'+names[i]+'"/>' );
+			i++;
+		}
 }

@@ -1,0 +1,48 @@
+{% if form_errors(form) %}
+	<p class="alert alert-danger">
+		{% if form_errors(form.username) %}
+			<strong>Username incorrect:</strong> The username is already used.
+		{% endif %}
+		{% if form_errors(form.email) %}
+			<strong>Email incorrect:</strong> Please verify the syntaxe of your email address.
+		{% endif %}
+		{% if form_errors(form.plainPassword) %}
+			<strong>Password incorrect:</strong> Please enter a valid password and confirm with the same password.
+		{% endif %}
+	</p>
+{% endif %}
+<form novalidate action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register form-horizontal">
+     <p clas="alert alert-danger span 6">
+     {{ form_widget(form._token) }}
+     {{ form_errors(form) }}
+     </p>
+     <div class="control-group">
+     	<label class="control-label" for="inputUsername">Username</label>
+		<div class="controls">
+			{{ form_widget(form.username, { 'attr': { 'id': 'inputUsername', 'placeholder': 'Username', 'class': 'span4' } }) }}
+		</div>
+	</div>
+	<div class="control-group">
+	    <label class="control-label" for="inputEmail">Email</label>
+	    <div class="controls">
+	    	{{ form_widget(form.email, { 'attr': { 'id': 'inputEmail', 'placeholder': 'Email address', 'class': 'span4' } }) }}
+    	</div>
+	</div>
+    <div class="control-group">
+    	<label class="control-label" for="inputPassword">Password</label>
+	    <div class="controls">
+	    	{{ form_widget(form.plainPassword.first, { 'attr': { 'id': 'inputPassword', 'placeholder': 'Password', 'class': 'span4' } })}}
+    	</div>
+	</div>
+    <div class="control-group">
+    	<label class="control-label" for="inputPasswordConfirmation">Password confirmation</label>
+	    <div class="controls">
+	    	{{ form_widget(form.plainPassword.second, { 'attr': { 'id': 'inputPasswordConfirmation', 'placeholder': 'Password confirmation', 'class': 'span4' } })}}
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<input type="submit" class="btn btn-success" value="Submit registration"/>
+		</div>
+	</div>
+</form>

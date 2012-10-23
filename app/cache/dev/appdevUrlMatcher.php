@@ -104,6 +104,16 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // uf_contact
+        if ($pathinfo === '/contact') {
+            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\ContactController::indexAction',  '_route' => 'uf_contact',);
+        }
+
+        // uf_map
+        if ($pathinfo === '/map') {
+            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\ContactController::helloTestAction',  '_route' => 'uf_map',);
+        }
+
         // uf_home
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -111,11 +121,6 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\DefaultController::indexAction',  '_route' => 'uf_home',);
-        }
-
-        // uf_hello
-        if ($pathinfo === '/hello') {
-            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\DefaultController::helloTestAction',  '_route' => 'uf_hello',);
         }
 
         // fos_user_security_login

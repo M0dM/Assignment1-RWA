@@ -1,3 +1,8 @@
+itb_ultimate_frisbee_user:
+    resource: "@ITBUltimateFrisbeeUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 itb_ultimate_frisbee:
     resource: "@ITBUltimateFrisbeeBundle/Controller/"
     type:     annotation

@@ -2,6 +2,7 @@
 
 namespace ITB\Bundle\UltimateFrisbeeBundle\Controller;
 
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -10,16 +11,21 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="uf_home")
-     * @Template("ITBUltimateFrisbeeBundle:Home:index.html.twig", vars={"null"})
+     * @Template()
      */
-    public function indexAction(){
-    }
-    
-    /**
-     * @Route("/hello", name="uf_hello")
-     * @Template("ITBUltimateFrisbeeBundle:Home:hello.html.twig", vars={"null"})
-     */
-    public function helloTestAction(){
+    public function indexAction(Request $request){
     	
+    	if($request->getMethod() == 'POST'){
+    		// Get the style to set into the page from the form
+    		$customCss = $request->request->get('optionsRadioStyles');
+    		 
+    		// Set into the session the style to call
+    		$session = $this->get('session');
+    		$session->set('cssStyle', $customCss);
+    		return $this->render("ITBUltimateFrisbeeBundle:Home:index.html.twig", array("customCss"=>$customCss));
+    	}
+    	else {
+    		return $this->render("ITBUltimateFrisbeeBundle:Home:index.html.twig");
+    	}
     }
 }

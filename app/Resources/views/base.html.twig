@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <title>{% block title %}Ultimate frisbee shop{% endblock %}</title>
         {% block stylesheets %}
 	        {% if customCss is defined %}
@@ -20,6 +21,8 @@
 	        			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapAmelia.min.css') }}" />
 	        		{% elseif app.session.get('cssStyle') == 'SuperHero' %}
 	        			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapSuperHero.min.css') }}" />
+	        		{% elseif app.session.get('cssStyle') == '' %}
+	        			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
 	        		{% endif %}
 	        	{% else %}
 	        		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />

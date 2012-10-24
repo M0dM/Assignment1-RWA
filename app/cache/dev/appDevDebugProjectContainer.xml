@@ -117,6 +117,7 @@
     <parameter key="validator.mapping.loader.xml_files_loader.mapping_files" type="collection">
       <parameter>/var/www/RWA/Assignment1/Assignment1-RWA/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</parameter>
       <parameter>/var/www/RWA/Assignment1/Assignment1-RWA/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml</parameter>
+      <parameter>/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeUserBundle/Resources/config/validation.xml</parameter>
       <parameter>/var/www/RWA/Assignment1/Assignment1-RWA/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation/orm.xml</parameter>
     </parameter>
     <parameter key="validator.mapping.loader.yaml_files_loader.mapping_files" type="collection"/>
@@ -463,7 +464,7 @@
     <parameter key="jms_di_extra.cache_dir">/var/www/RWA/Assignment1/Assignment1-RWA/app/cache/dev/jms_diextra</parameter>
     <parameter key="jms_di_extra.doctrine_integration">true</parameter>
     <parameter key="jms_di_extra.doctrine_integration.entity_manager.file">/var/www/RWA/Assignment1/Assignment1-RWA/app/cache/dev/jms_diextra/doctrine/EntityManager.php</parameter>
-    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EM5087019935085_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
+    <parameter key="jms_di_extra.doctrine_integration.entity_manager.class">EM5087d837525f2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager</parameter>
     <parameter key="security.secured_services" type="collection"/>
     <parameter key="security.access.method_interceptor.class">JMS\SecurityExtraBundle\Security\Authorization\Interception\MethodSecurityInterceptor</parameter>
     <parameter key="security.access.method_access_control" type="collection"/>
@@ -1245,6 +1246,7 @@
                 <argument type="collection">
                   <argument>/var/www/RWA/Assignment1/Assignment1-RWA/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
                   <argument>/var/www/RWA/Assignment1/Assignment1-RWA/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation.xml</argument>
+                  <argument>/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeUserBundle/Resources/config/validation.xml</argument>
                   <argument>/var/www/RWA/Assignment1/Assignment1-RWA/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Resources/config/validation/orm.xml</argument>
                 </argument>
               </service>
@@ -1578,7 +1580,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>50870199141bd</argument>
+            <argument>5087d8370ef90</argument>
           </service>
         </argument>
       </argument>
@@ -1864,7 +1866,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>50870199141bd</argument>
+            <argument>5087d8370ef90</argument>
             <argument type="service" id="monolog.logger.security"/>
           </service>
         </argument>
@@ -2297,7 +2299,7 @@
     <service id="doctrine.orm.default_manager_configurator" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator">
       <argument type="collection"/>
     </service>
-    <service id="doctrine.orm.default_entity_manager" class="EM5087019935085_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
+    <service id="doctrine.orm.default_entity_manager" class="EM5087d837525f2_546a8d27f194334ee012bfe64f629947b07e4919\__CG__\Doctrine\ORM\EntityManager">
       <file>/var/www/RWA/Assignment1/Assignment1-RWA/app/cache/dev/jms_diextra/doctrine/EntityManager.php</file>
       <argument type="service">
         <service class="Doctrine\ORM\EntityManager" factory-method="create" public="false">

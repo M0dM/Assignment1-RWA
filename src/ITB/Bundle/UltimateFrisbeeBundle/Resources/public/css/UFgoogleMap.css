@@ -1,0 +1,8 @@
+.adp-placemark tr{
+	display:block;
+}
+
+.adp-placemark td{
+	display:block;
+	float:left;
+}

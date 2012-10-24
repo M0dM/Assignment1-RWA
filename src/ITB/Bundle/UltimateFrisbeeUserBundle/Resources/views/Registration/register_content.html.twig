@@ -1,12 +1,12 @@
-{% if form_errors(form) %}
+{% if form_errors(form.username) or form_errors(form.email) or form_errors(form.plainPassword.first) %}
 	<p class="alert alert-danger">
 		{% if form_errors(form.username) %}
-			<strong>Username incorrect:</strong> The username is already used.
+			<strong>Username error:</strong> The username is blank or already used.<br />
 		{% endif %}
 		{% if form_errors(form.email) %}
-			<strong>Email incorrect:</strong> Please verify the syntaxe of your email address.
+			<strong>Email error:</strong> Please verify the syntaxe of your email address.<br />
 		{% endif %}
-		{% if form_errors(form.plainPassword) %}
+		{% if form_errors(form.plainPassword.first) %}
 			<strong>Password incorrect:</strong> Please enter a valid password and confirm with the same password.
 		{% endif %}
 	</p>

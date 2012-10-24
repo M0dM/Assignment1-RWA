@@ -16,6 +16,7 @@ $("document").ready(function(){
     }
     map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
     directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById('directions_panel'));
   }
 
   function calcRoute() {
@@ -26,24 +27,11 @@ $("document").ready(function(){
         destination: end,
         travelMode: google.maps.TravelMode.DRIVING
     };
-    alert("PLOPZOFJQOIFOQZF");
-    directionsService.route(request, function(result, status) {
+    directionsService.route(request, function(response, status) {
     	if (status == google.maps.DirectionsStatus.OK) {
-          directionsDisplay.setDirections(result);
           $("#directions_panel").empty();
-          // Display routes ----
-          var route = response.routes[0];
-          var summaryPanel = document.getElementById('directions_panel');
-          summaryPanel.innerHTML = '';
-          // For each route, display summary information.
-          for (var i = 0; i < route.legs.length; i++) {
-            var routeSegment = i + 1;
-            summaryPanel.innerHTML += '<b>Route Segment: ' + routeSegment + '</b><br>';
-            summaryPanel.innerHTML += route.legs[i].start_address + ' to ';
-            summaryPanel.innerHTML += route.legs[i].end_address + '<br>';
-            summaryPanel.innerHTML += route.legs[i].distance.text + '<br><br>';
+          directionsDisplay.setDirections(response);
           }
-        }
         else{
         	alert("Status problem");
         }

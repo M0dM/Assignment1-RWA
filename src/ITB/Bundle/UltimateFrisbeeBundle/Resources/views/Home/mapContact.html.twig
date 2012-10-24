@@ -6,7 +6,7 @@
 
 {% block javascript %}
 	{{ parent() }}
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
 	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFgoogleMap.js') }}"></script>
 {% endblock %}
 
@@ -22,7 +22,7 @@
 		    <div class="control-group">
 				<label class="control-label" for="inputAddress">Your address</label>
 				<div class="controls">
-					<input type="text" id="start" placeholder="Address">
+					<input type="text" id="start" class="span8" placeholder="Address">
 				</div>
 			</div>
 			<div class="control-group">
@@ -34,9 +34,9 @@
     </div>
 	
 	<div id="directions_panel" style="display:block; float:left; width:30%; margin-right: 8px;">
-	    <p class="alert alert-info">Lorem ipsum dolor sit amet, eu mel sonet graecis tibique, in pri tale minimum propriae, quo illum augue virtute et. Probatus neglegentur ad pri, cum in rebum persius necessitatibus, veniam explicari per id. Explicari repudiare percipitur has ut, facete nominavi voluptua eos no. Vis scaevola consulatu appellantur ea. Ius amet principes ex, vel novum adipiscing ei.</p>
+	    <p class="alert alert-info">No directions informations availiable yet. Please generate the road using the from above this text.</p>
     </div>
     
-	<div id="map_canvas" style="display:block;float:rigth;width:650px;height:500px;margin-bottom:20px;"></div>
+	<div id="map_canvas" style="display:block;margin-top:10px;float:rigth;width:650px;height:500px;margin-bottom:20px;"></div>
     
 {% endblock %}

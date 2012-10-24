@@ -22,7 +22,7 @@ class DefaultController extends Controller
     		// Set into the session the style to call
     		$session = $this->get('session');
     		$session->set('cssStyle', $customCss);
-    		return $this->render("ITBUltimateFrisbeeBundle:Home:index.html.twig", array("customCss"=>$customCss));
+    		return $this->redirect($request->headers->get('referer'));
     	}
     	else {
     		return $this->render("ITBUltimateFrisbeeBundle:Home:index.html.twig");

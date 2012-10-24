@@ -5,29 +5,15 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <title>{% block title %}Ultimate frisbee shop{% endblock %}</title>
         {% block stylesheets %}
-	        {% if customCss is defined %}
-	        	{% if customCss == 'Standard' %}
-	        		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
-	        	{% elseif customCss == 'Amelia' %}
-	        		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapAmelia.min.css') }}" />
-	        	{% elseif customCss == 'SuperHero' %}
-	        		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapSuperHero.min.css') }}" />
-	        	{% endif %}
-	        {% else %}
-	        	{% if app.session.get('cssStyle') is defined %}
-	        		{% if app.session.get('cssStyle') == 'Standard' %}
-	        			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
-	        		{% elseif app.session.get('cssStyle') == 'Amelia' %}
-	        			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapAmelia.min.css') }}" />
-	        		{% elseif app.session.get('cssStyle') == 'SuperHero' %}
-	        			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapSuperHero.min.css') }}" />
-	        		{% elseif app.session.get('cssStyle') == '' %}
-	        			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
-	        		{% endif %}
-	        	{% else %}
-	        		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
-	        	{% endif %}
-	        {% endif %}
+    		{% if app.session.get('cssStyle') == 'Standard' %}
+    			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
+    		{% elseif app.session.get('cssStyle') == 'Amelia' %}
+    			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapAmelia.min.css') }}" />
+    		{% elseif app.session.get('cssStyle') == 'SuperHero' %}
+    			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrapSuperHero.min.css') }}" />
+    		{% elseif app.session.get('cssStyle') == '' %}
+    			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
+    		{% endif %}
     		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFgeneral.css') }}"/>
     	{% endblock %}
         {% block javascript %}

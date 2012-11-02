@@ -59,57 +59,49 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
         echo "\">Contact</a>
 \t\t\t\t\t\t    <div>
 \t\t\t\t\t    \t\t<ul>
-\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 42
+\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 41
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_contact"), "html", null, true);
-        echo "\">General informations</a>
-\t\t\t\t\t\t\t\t\t</li>
+        echo "\">General informations</a></li>
 \t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 45
+        // line 43
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_docView"), "html", null, true);
         echo "\">Description file</a>
 \t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 48
+\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 45
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("doc/document.docx"), "html", null, true);
-        echo "\">Download</a>
-\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 51
+        echo "\">Download</a></li>
+\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 46
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_docView"), "html", null, true);
-        echo "\">View</a>
-\t\t\t\t\t\t\t\t\t\t\t</li>
+        echo "\">View</a></li>
 \t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t<li>
-\t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 56
+\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 49
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_map"), "html", null, true);
-        echo "\">Map</a>
-\t\t\t\t\t\t\t\t\t</li>
+        echo "\">Map</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t    </div>
 \t\t\t\t\t    </li>
 \t\t\t\t\t    ";
-        // line 61
+        // line 53
         if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
-            // line 62
+            // line 54
             echo "\t\t\t\t\t\t    <li><a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_logout"), "html", null, true);
             echo "\">Logout</a></li>
 \t\t\t\t\t\t";
         } else {
-            // line 64
+            // line 56
             echo "\t\t\t\t\t\t\t<li><a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_login"), "html", null, true);
             echo "\">Login</a></li>
 \t\t\t\t\t\t";
         }
-        // line 66
+        // line 58
         echo "\t\t\t\t\t    </ul>
 \t\t\t    </div>
 \t\t    </div>
@@ -118,7 +110,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t<div id=\"styleSwitcher\">
 \t\t\t<h4 id=\"titleStyleSwitcher\">Style switcher: </h4>
 \t\t\t<form id=\"formStyleSwitcher\" method=\"post\" class=\"form-inline\" action=\"";
-        // line 73
+        // line 65
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_home"), "html", null, true);
         echo "\">
 \t\t\t\t<label class=\"radio\">
@@ -137,9 +129,9 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t\t</form>
 \t\t</div>
 \t        ";
-        // line 89
+        // line 81
         $this->displayBlock('body', $context, $blocks);
-        // line 90
+        // line 82
         echo "\t    </div>
     </body>
 </html>
@@ -215,7 +207,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
         ";
     }
 
-    // line 89
+    // line 81
     public function block_body($context, array $blocks = array())
     {
     }
@@ -232,6 +224,6 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  217 => 89,  211 => 24,  207 => 23,  198 => 21,  195 => 20,  172 => 13,  166 => 11,  154 => 7,  139 => 89,  111 => 66,  105 => 64,  97 => 61,  75 => 48,  21 => 1,  60 => 16,  47 => 32,  38 => 7,  299 => 100,  293 => 96,  290 => 95,  287 => 94,  285 => 93,  280 => 90,  274 => 86,  271 => 85,  268 => 84,  266 => 83,  261 => 80,  247 => 79,  243 => 77,  228 => 75,  220 => 73,  218 => 72,  213 => 70,  209 => 69,  202 => 66,  196 => 63,  183 => 61,  181 => 60,  175 => 58,  158 => 57,  107 => 41,  101 => 34,  80 => 24,  63 => 42,  36 => 6,  156 => 58,  148 => 6,  142 => 50,  140 => 50,  127 => 45,  123 => 44,  115 => 42,  110 => 42,  85 => 28,  65 => 19,  59 => 16,  45 => 9,  103 => 24,  91 => 20,  74 => 22,  70 => 14,  66 => 12,  89 => 56,  82 => 19,  42 => 12,  223 => 96,  214 => 90,  210 => 88,  203 => 22,  199 => 83,  194 => 80,  192 => 62,  189 => 18,  187 => 77,  184 => 17,  178 => 15,  170 => 67,  157 => 8,  152 => 59,  145 => 53,  130 => 48,  125 => 49,  119 => 45,  116 => 44,  112 => 43,  102 => 36,  98 => 33,  76 => 4,  73 => 3,  69 => 45,  56 => 38,  32 => 7,  26 => 3,  22 => 3,  25 => 4,  23 => 3,  17 => 1,  92 => 39,  86 => 27,  77 => 23,  57 => 22,  29 => 4,  24 => 6,  19 => 2,  68 => 20,  61 => 24,  44 => 7,  20 => 2,  161 => 63,  153 => 50,  150 => 49,  147 => 51,  143 => 46,  137 => 45,  129 => 42,  121 => 47,  118 => 46,  113 => 39,  104 => 35,  99 => 62,  94 => 21,  81 => 51,  78 => 24,  72 => 16,  64 => 15,  53 => 15,  50 => 15,  48 => 10,  41 => 8,  39 => 7,  35 => 8,  33 => 5,  30 => 3,  27 => 2,  182 => 70,  176 => 71,  169 => 62,  163 => 58,  160 => 9,  155 => 56,  151 => 54,  149 => 52,  141 => 90,  136 => 47,  134 => 50,  131 => 43,  128 => 47,  120 => 73,  117 => 36,  114 => 35,  109 => 38,  106 => 37,  100 => 30,  96 => 34,  93 => 33,  90 => 28,  87 => 19,  83 => 24,  79 => 25,  71 => 19,  62 => 17,  58 => 23,  55 => 14,  52 => 13,  49 => 14,  46 => 13,  43 => 8,  40 => 7,  37 => 26,  34 => 20,  31 => 4,  28 => 6,);
+        return array (  195 => 22,  190 => 21,  164 => 13,  146 => 7,  133 => 82,  97 => 56,  67 => 43,  21 => 1,  60 => 16,  47 => 32,  38 => 7,  299 => 100,  293 => 96,  290 => 95,  287 => 94,  285 => 93,  280 => 90,  274 => 86,  271 => 85,  268 => 84,  266 => 83,  261 => 80,  247 => 79,  243 => 77,  228 => 75,  220 => 73,  218 => 72,  213 => 70,  209 => 81,  202 => 66,  196 => 63,  183 => 61,  181 => 18,  175 => 58,  158 => 11,  107 => 41,  101 => 34,  80 => 24,  63 => 16,  36 => 6,  156 => 58,  148 => 55,  142 => 50,  140 => 6,  127 => 45,  123 => 44,  115 => 42,  110 => 42,  85 => 28,  65 => 19,  59 => 16,  45 => 9,  103 => 58,  91 => 54,  74 => 22,  70 => 14,  66 => 12,  89 => 53,  82 => 49,  42 => 12,  223 => 96,  214 => 90,  210 => 88,  203 => 24,  199 => 23,  194 => 80,  192 => 62,  189 => 78,  187 => 20,  184 => 76,  178 => 72,  170 => 15,  157 => 61,  152 => 9,  145 => 53,  130 => 48,  125 => 49,  119 => 45,  116 => 44,  112 => 65,  102 => 36,  98 => 33,  76 => 46,  73 => 3,  69 => 19,  56 => 38,  32 => 7,  26 => 3,  22 => 3,  25 => 4,  23 => 3,  17 => 1,  92 => 39,  86 => 27,  77 => 23,  57 => 22,  29 => 4,  24 => 6,  19 => 2,  68 => 20,  61 => 24,  44 => 7,  20 => 2,  161 => 63,  153 => 50,  150 => 49,  147 => 51,  143 => 46,  137 => 45,  129 => 42,  121 => 47,  118 => 46,  113 => 39,  104 => 35,  99 => 33,  94 => 21,  81 => 18,  78 => 24,  72 => 45,  64 => 15,  53 => 15,  50 => 15,  48 => 10,  41 => 8,  39 => 7,  35 => 8,  33 => 5,  30 => 3,  27 => 2,  182 => 70,  176 => 17,  169 => 62,  163 => 58,  160 => 57,  155 => 56,  151 => 54,  149 => 8,  141 => 54,  136 => 47,  134 => 50,  131 => 81,  128 => 47,  120 => 37,  117 => 36,  114 => 35,  109 => 38,  106 => 37,  100 => 30,  96 => 34,  93 => 33,  90 => 28,  87 => 19,  83 => 24,  79 => 25,  71 => 19,  62 => 41,  58 => 23,  55 => 14,  52 => 13,  49 => 14,  46 => 13,  43 => 8,  40 => 7,  37 => 26,  34 => 20,  31 => 4,  28 => 6,);
     }
 }

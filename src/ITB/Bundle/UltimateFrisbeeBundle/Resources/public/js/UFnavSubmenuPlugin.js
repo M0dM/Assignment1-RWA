@@ -4,12 +4,17 @@
 //////////////////////////////////////////////////////////////
 
 jQuery.fn.generateSubMenu = function(){
-    return this.each(function(){
-    	//variable declaration
+    
+	return this.each(function(){
+    	//get the height of the bootstrap menu item for the curent theme
     	var menuItemHeight = $(this).children("div").attr("height");
     	
     	//by default we don't display the submenu
     	$(this).children("div").css("display", "none");
+    	
+    	////////////////////////////////////////////////////////////
+    	/// Events : mouseenter / mouseleave on bootstrap menu Item
+    	////////////////////////////////////////////////////////////
     	
     	$(this).mouseenter(function(){
     	/* mouse on the menu item element chosed */
@@ -32,5 +37,8 @@ jQuery.fn.generateSubMenu = function(){
     		$(this).children("div").css("display", "none");
         
     	});
-    });
+
+    	/////////////////////////////////////////////////////////////
+    
+	});
 };

@@ -1,9 +1,10 @@
 $("document").ready(function(){
 	$('#navItemContact').mouseenter(function(){
-		$('#contactNavItem').append('<div id="contactSubMenu"></div>');
+		$(this).append('<div id="contactNavItem"></div>');
 		$('#contactNavItem').css('position', 'relative');
-		$('#contactSubMenu').css('display','block').css('position','absolute').css('top','1px').css('left','0px');
-		$('#contactSubMenu').append(
+		var contactItemHeight = $('#contactNavItem').attr("height");
+		$('#contactNavItem').css('display','block').css('position','absolute').css('top', contactItemHeight ).css('left','0px');
+		$('#contactNavItem').append(
 			'<ul id="contactSubMenuList">'+
 				'<li><a href="#">General informations</a></li>'+
 				'<li>'+
@@ -19,6 +20,6 @@ $("document").ready(function(){
 		$("#contactSubMenuList").menu();
 	});
 	$('#navItemContact').mouseleave(function(){
-		$('#contactSubMenu').remove();
+		$('#contactNavItem').remove();
 	});
 });

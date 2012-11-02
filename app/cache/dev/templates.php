@@ -107,6 +107,7 @@
   'ITBUltimateFrisbeeUserBundle:Registration:register_content.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeUserBundle/Resources/views/Registration/register_content.html.twig',
   'ITBUltimateFrisbeeUserBundle:Registration:register.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeUserBundle/Resources/views/Registration/register.html.twig',
   'ITBUltimateFrisbeeBundle:Home:mapContact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Home/mapContact.html.twig',
+  'ITBUltimateFrisbeeBundle:Home:documentContact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Home/documentContact.html.twig',
   'ITBUltimateFrisbeeBundle:Home:contact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Home/contact.html.twig',
   'ITBUltimateFrisbeeBundle:Home:index.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Home/index.html.twig',
   'AcmeDemoBundle::layout.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/Acme/DemoBundle/Resources/views/layout.html.twig',

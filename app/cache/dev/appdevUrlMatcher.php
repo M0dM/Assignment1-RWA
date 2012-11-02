@@ -111,7 +111,12 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // uf_map
         if ($pathinfo === '/map') {
-            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\ContactController::helloTestAction',  '_route' => 'uf_map',);
+            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\ContactController::mapAction',  '_route' => 'uf_map',);
+        }
+
+        // uf_docView
+        if ($pathinfo === '/description/view') {
+            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\ContactController::documentViewAction',  '_route' => 'uf_docView',);
         }
 
         // uf_home

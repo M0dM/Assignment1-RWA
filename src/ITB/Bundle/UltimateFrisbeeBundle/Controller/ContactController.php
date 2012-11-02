@@ -19,6 +19,13 @@ class ContactController extends Controller
      * @Route("/map", name="uf_map")
      * @Template("ITBUltimateFrisbeeBundle:Home:mapContact.html.twig", vars={"null"})
      */
-    public function helloTestAction(){
+    public function mapAction(){
+    }
+    
+    /**
+     * @Route("/description/view", name="uf_docView")
+     * @Template("ITBUltimateFrisbeeBundle:Home:documentContact.html.twig", vars={"null"})
+     */
+    public function documentViewAction(){
     }
 }

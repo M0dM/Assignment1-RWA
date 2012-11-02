@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+	{{ parent() }}
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/jquery.gdocsviewer.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFgoogleViewer.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<a href="http://ultimatefrisbeeshop.netau.net/document.docx" id="embedURL"></a>
+{% endblock %}

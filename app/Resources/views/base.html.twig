@@ -31,7 +31,7 @@
 			    <div class="span12 uf-nav">
 			    <a class="brand" href="{{ path("uf_home") }}">Ultimate frisbee shop</a>
 					    <ul class="nav">
-					    <li><a href="#">The sport</a></li>
+					    <li><a href="{{ path("uf_sport") }}">The sport</a></li>
 					    <li><a href="#">Products</a></li>
 					    <li><a href="#">Forum</a></li>
 					    <li id="contactMenuPlaceholder" style="position:relative">
@@ -46,7 +46,7 @@
 											<li><a href="{{path('uf_docView')}}">View</a></li>
 										</ul>
 									</li>
-									<li><a href="{{path('uf_map')}}">Map</a></li>
+									<li><a href="{{path('uf_map')}}">Location</a></li>
 								</ul>
 						    </div>
 					    </li>
@@ -61,22 +61,26 @@
 		</div>
 		<div class="main span12">
 		<div id="styleSwitcher">
-			<h4 id="titleStyleSwitcher">Style switcher: </h4>
-			<form id="formStyleSwitcher" method="post" class="form-inline" action="{{ path("uf_home") }}">
-				<label class="radio">
-					<input type="radio" name="optionsRadioStyles" id="optionsRadio2" value="Standard" checked>
-					<p>Standard</p>
-				</label>
-				<label class="radio">
-					<input type="radio" name="optionsRadioStyles" id="optionsRadios1" value="Amelia">
-					<p>Amelia</p>
-				</label>
-				<label class="radio">
-					<input type="radio" name="optionsRadioStyles" id="optionsRadio2" value="SuperHero">
-					<p>Superhero</p>
-				</label>
-				<input id="formStyleSwitcherButton" class="btn btn-mini btn-info" type="submit" value="Switch">
-			</form>
+			<blockquote>
+			{% block styleswitcher %}
+				<h4 id="titleStyleSwitcher">Style switcher: </h4>
+				<form id="formStyleSwitcher" method="post" class="form-inline" action="{{ path("uf_home") }}">
+					<label class="radio">
+						<input type="radio" name="optionsRadioStyles" id="optionsRadio2" value="Standard" checked>
+						<p>Standard</p>
+					</label>
+					<label class="radio">
+						<input type="radio" name="optionsRadioStyles" id="optionsRadios1" value="Amelia">
+						<p>Amelia</p>
+					</label>
+					<label class="radio">
+						<input type="radio" name="optionsRadioStyles" id="optionsRadio2" value="SuperHero">
+						<p>Superhero</p>
+					</label>
+					<input id="formStyleSwitcherButton" class="btn btn-mini btn-info" type="submit" value="Switch">
+				</form>
+			{% endblock %}
+			</blockquote>
 		</div>
 	        {% block body %}{% endblock %}
 	    </div>

@@ -1,0 +1,40 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	<h1 class="titleUnderAccordion">Contacts </h1>
+	<ul class="nav nav-tabs">
+      <li class="active"><a href="{{path('uf_contact')}}">General informations</a></li>
+      <li><a href="{{path('uf_map')}}">Location</a></li>
+    </ul>
+    <table class="table">
+    	<tbody>
+    		<tr>
+	          <td>Company description</td>
+	          <td>
+	          	<a href="{{ asset('doc/document.docx') }}">Download</a> |
+	          	<a href="{{path('uf_docView')}}">View</a>
+	          </td>
+	        </tr>
+			<tr>
+	          <td>Address</td>
+	          <td>Ultimate frisbee shop
+	              <br />Institute of Technology Blanchardstown, 
+	              <br />Blanchardstown Road North, 
+	          	  <br />Dublin 15
+	          </td>
+	        </tr>
+	        <tr>
+	          <td>Email address</td>
+	          <td><a href="mailto:info@itb.ie">Email Us: info@itb.ie</a></td>
+	        </tr>
+	        <tr>
+	          <td>Phone number</td>
+	          <td>+353 (1) 8851000</td>
+	        </tr>
+	        <tr>
+	          <td>Fax</td>
+	          <td>+353 (1) 8851001</td>
+	        </tr>
+	      </tbody>
+    </table>
+{% endblock %}

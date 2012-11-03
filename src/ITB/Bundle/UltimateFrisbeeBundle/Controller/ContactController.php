@@ -10,21 +10,21 @@ class ContactController extends Controller
 {
     /**
      * @Route("/contact", name="uf_contact")
-     * @Template("ITBUltimateFrisbeeBundle:Home:contact.html.twig", vars={"null"})
+     * @Template("ITBUltimateFrisbeeBundle:Contact:contact.html.twig", vars={"null"})
      */
     public function indexAction(){
     }
     
     /**
      * @Route("/map", name="uf_map")
-     * @Template("ITBUltimateFrisbeeBundle:Home:mapContact.html.twig", vars={"null"})
+     * @Template("ITBUltimateFrisbeeBundle:Contact:mapContact.html.twig", vars={"null"})
      */
     public function mapAction(){
     }
     
     /**
      * @Route("/description/view", name="uf_docView")
-     * @Template("ITBUltimateFrisbeeBundle:Home:documentContact.html.twig", vars={"null"})
+     * @Template("ITBUltimateFrisbeeBundle:Contact:documentContact.html.twig", vars={"null"})
      */
     public function documentViewAction(){
     }

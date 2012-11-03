@@ -1,0 +1,72 @@
+{% extends '::base.html.twig' %}
+
+{% block javascript %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFsportPresentation.js') }}"></script>
+{% endblock %}
+
+{% block styleswitcher %}
+	{{ parent() }}
+	<div id="adaptSize">
+		<h4>Text size: </h4>
+		<select>
+	          <option class="textSizeOption" value="1em">Standard</option>
+	          <option class="textSizeOption" value="17px">Medium</option>
+	          <option class="textSizeOption" value="19px">Large</option>
+	    </select>
+    </div>
+{% endblock %}
+	
+{% block body %}
+	<p class="alert alert-info">Theses informations came from <a href="http://en.wikipedia.org/">http://en.wikipedia.org/</a></p>
+	<div id="accordionPlaceholder">
+	    <h3>Introduction</h3>
+	    <div class="content">
+	    	<img class="descriptionImageLeft" src="{{ asset('images/ultimate.jpg') }}" alt="ultimate playing image"/>
+	        <p>
+		        <strong>Ultimate</strong> is a team sport played with a flying disc. The object of the game is to score points by passing the disc to a player in the opposing end zone, similar to an end zone in American football or the in-goal area in rugby. Players may not run with the disc, and must keep a pivot while holding the disc.
+				<br />
+				While originally called <strong>ultimate frisbee</strong>, it is now officially called ultimate in many areas because Frisbee is registered as a trademark, albeit genericized, for the line of discs made by the Wham-O toy company. In 2008, there were 4.9 million Ultimate players in the US.
+	        </p>
+	    </div>
+	    <h3>Rules</h3>
+	    <div class="content">
+	        <p>
+		        The basic rules of ultimate are as follows:
+		        <br /><br />
+				The two teams begin at opposite end zones and try to advance the disc to the other end zone. The disc is put into play by one team throwing off to the other team. This throw-off is called the <strong>pull</strong>. Once in play, the disc may be advanced only by passing, so the player holding the disc may not move (but may pivot on one foot). If a team successfully advances a disc into the end zone, that team scores a point, the teams swap directions, and the team that scored pulls to the other team.
+				<br /><br />
+				If a pass is incomplete, intercepted, or caught out of bounds, the opposing team immediately gains possession and tries to move the disc in the other direction. Another way to change possession is that the player holding the disc, called the <strong>thrower</strong>, has a limited time to throw the disc: A defensive player within 3 meters of the thrower may loudly count to 10 (by seconds), and if the disc is not thrown by the time 10 is reached, the defense immediately gains possession. This defensive player is called the <strong>marker</strong>, and the audible count is called the <strong>stall count</strong>.
+				<br /><br />
+				The game is played until an end condition is reached, typically a time limit or when one team reaches a certain number of points.
+				<br /><br />
+				A USA Ultimate regulation field is 120 yards (110m) by 40 yards (37m), including end zones each 25 yards (23m) deep.
+	        </p>
+	    </div>
+	    <h3>History</h3>
+	    <div class="content">
+	        <p>
+				The original "frisbee" was nothing more than a tin pie plate from the Frisbie Pie Company located in New Haven, CT. It was in the early 1920s that students from Yale started playing catch with these pie tins. Truck drivers for the Frisbie company began throwing the pie tins to passersby, and it eventually became a major activity introduced to soldiers around the country during WWII.
+				<br /><br />
+				In 1948, a man by the name of Fred Morrison developed a plastic version of the disc which he called the Flying Saucer, and then in 1951, created an improvised version known as the Pluto Platter. The Wham-O Manufacturing Company bought the patent from Morrison in 1955 and renamed it the Frisbee.
+				<br /><br />
+				The game of Ultimate, derived from Fred Morrison's original product, was invented by Jared Kass and Joel Silver in 1967 at Columbia High School, located in Maplewood, NJ.[6] Its collegiate roots can be traced back to the first ever game played between Rutgers and Princeton in 1972.
+	        </p>
+	    </div>
+	    <h3>Spirit of the game</h3>
+	    <div class="content">
+	    	<img class="descriptionImageLeft" src="{{ asset('images/ultimateSpirit.jpg') }}" alt="ultimate playing image"/>
+	        <p>
+	        	<br />
+				Ultimate is known for its "Spirit of the Game", often abbreviated SOTG. Ultimate's self-officiated nature demands a strong spirit of sportsmanship and respect. The following description is from the official Ultimate rules established by USA Ultimate:
+				<br /><br /><br /><br />
+			</p>
+    		<blockquote>
+    			Ultimate has traditionally relied upon a spirit of sportsmanship which places the responsibility for fair play on the player. Highly competitive play is encouraged, but never at the expense of the bond of mutual respect between players, adherence to the agreed upon rules of the game, or the basic joy of play. Protection of these vital elements serves to eliminate adverse conduct from the Ultimate field. Such actions as taunting of opposing players, dangerous aggression, intentional fouling, or other 'win-at-all-costs' behavior are contrary to the spirit of the game and must be avoided by all players.
+			</blockquote>
+			<p>
+				Many tournaments give awards for the most spirited team, as voted for by all the teams taking part in the tournament.
+	        </p>
+	    </div>
+	</div>
+{% endblock %}

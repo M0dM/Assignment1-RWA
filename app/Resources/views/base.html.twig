@@ -14,8 +14,8 @@
     		{% elseif app.session.get('cssStyle') == '' %}
     			<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/bootstrap/css/bootstrap.min.css') }}" />
     		{% endif %}
-	       	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/jqueryUI-with-flickTheme/jquery-ui-1.9.1.min.css') }}"></script>
-    		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFgeneral.css') }}"/>
+    		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/jqueryUI-with-flickTheme/jquery-ui-1.9.1.min.css') }}"></script>
+        	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFgeneral.css') }}"/>
     	{% endblock %}
         {% block javascript %}
        		<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/jquery-1.8.2.js') }}"></script>
@@ -31,29 +31,54 @@
 			    <div class="span12 uf-nav">
 			    <a class="brand" href="{{ path("uf_home") }}">Ultimate frisbee shop</a>
 					    <ul class="nav">
-					    <li><a href="{{ path("uf_sport") }}">The sport</a></li>
-					    <li><a href="#">Products</a></li>
-					    <li><a href="#">Forum</a></li>
-					    <li id="contactMenuPlaceholder" style="position:relative">
-						    <a href="{{path('uf_contact')}}">Contact</a>
+					    <li><a href="{{ path("uf_sport") }}"><i class="icon-book"></i> The sport</a></li>
+					    <li id="tournamentsMenuPlaceholder">
+					    	<a href="{{path('uf_tournament')}}"><i class="icon-calendar"></i> Tournaments</a>
 						    <div>
 					    		<ul>
-									<li><a href="{{path('uf_contact')}}">General informations</a></li>
+									<li><a href="{{path('uf_tournament')}}"><i class="icon-th-list"></i> All tournaments</a></li>
+									<li><a href="{{path('uf_tournament_calendar')}}"><i class="icon-calendar"></i> Tournaments by date</a></li>
+								</ul>
+						    </div>
+						</li>
+					    <li><a href="#"><i class="icon-shopping-cart"></i> Products</a></li>
+					    <li id="contactMenuPlaceholder">
+						    <a href="{{path('uf_contact')}}"><i class="icon-envelope"></i> Contact</a>
+						    <div>
+					    		<ul>
+									<li><a href="{{path('uf_contact')}}"><i class="icon-th-list"></i> General informations</a></li>
 									<li>
-										<a href="{{path('uf_docView')}}">Description file</a>
+										<a href="{{path('uf_docView')}}"><i class="icon-file"></i> Description file</a>
 										<ul>
-											<li><a href="{{ asset('doc/document.docx') }}">Download</a></li>
-											<li><a href="{{path('uf_docView')}}">View</a></li>
+											<li><a href="{{ asset('doc/document.docx') }}"><i class="icon-download"></i> Download</a></li>
+											<li><a href="{{path('uf_docView')}}"><i class="icon-eye-open"></i> View</a></li>
 										</ul>
 									</li>
-									<li><a href="{{path('uf_map')}}">Location</a></li>
+									<li><a href="{{path('uf_map')}}"><i class="icon-map-marker"></i> Location</a></li>
 								</ul>
 						    </div>
 					    </li>
 					    {% if is_granted('ROLE_USER') %}
-						    <li><a href="{{ path("fos_user_security_logout") }}">Logout</a></li>
+						    <li id="logoutMenuPlaceholder">
+						    	<a href="{{ path("fos_user_security_logout") }}"><i class="icon-off"></i> Logout</a>
+						    	<div>
+						    		<ul>
+										<li><a href="{{path('fos_user_security_logout')}}"><i class="icon-off"></i> Logout</a></li>
+						    			<li><a href="{{path('fos_user_profile_show')}}"><i class="icon-user"></i> My profile</a></li>
+						    			<li><a href="{{path('fos_user_profile_edit')}}"><i class="icon-pencil"></i> Edit profile</a></li>
+						    		</ul>
+						    	</div>
+						    </li>
 						{% else %}
-							<li><a href="{{ path("fos_user_security_login") }}">Login</a></li>
+							<li id="loginMenuPlaceholder">
+								<a href="{{path('fos_user_security_login')}}"><i class="icon-ok"></i> Login</a>
+							    <div>
+						    		<ul>
+										<li><a href="{{path('fos_user_security_login')}}"><i class="icon-ok"></i> Login</a></li>
+										<li><a href="{{path('fos_user_registration_register')}}"><i class="icon-edit"></i> Register</a></li>
+									</ul>
+							    </div>
+						    </li>
 						{% endif %}
 					    </ul>
 			    </div>

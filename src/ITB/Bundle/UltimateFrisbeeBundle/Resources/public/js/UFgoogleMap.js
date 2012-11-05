@@ -9,6 +9,7 @@ var imageLink;
 $("document").ready(function(){
 	imageLink = $('#imageForLink').attr('src');
 	$('#imageForLink').remove();
+	$('#start').resizable();
 	
 	// initialize the map options
 	var mapOptions = initialize();

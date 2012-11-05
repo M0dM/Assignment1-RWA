@@ -1,5 +1,5 @@
 {
-    "hash": "316fa8b712734dbc4ef74ff29c639840",
+    "hash": "9b984172d0702e51b7a9df6cdfbeb661",
     "packages": [
         {
             "name": "doctrine/common",
@@ -338,6 +338,54 @@
             "keywords": [
                 "User management"
             ]
+        },
+        {
+            "name": "herzult/forum-bundle",
+            "version": "dev-master",
+            "target-dir": "Herzult/Bundle/ForumBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benoitBrayer/HerzultForumBundle",
+                "reference": "5471f479f365acf9c4441e196916018192ca41a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/benoitBrayer/HerzultForumBundle/zipball/5471f479f365acf9c4441e196916018192ca41a1",
+                "reference": "5471f479f365acf9c4441e196916018192ca41a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "pagerfanta/pagerfanta": "*",
+                "white-october/pagerfanta-bundle": "*"
+            },
+            "time": "1346052870",
+            "type": "symfony-bundle",
+            "installation-source": "source",
+            "autoload": {
+                "psr-0": {
+                    "Herzult\\Bundle\\ForumBundle": "."
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Antoine Hérault",
+                    "email": "antoine.herault@gmail.com",
+                    "homepage": "https://github.com/Herzult"
+                }
+            ],
+            "description": "A simple Symfony forum bundle.",
+            "homepage": "https://github.com/Herzult/HerzultForumBundle.git",
+            "keywords": [
+                "symfony",
+                "forum"
+            ],
+            "support": {
+                "source": "https://github.com/benoitBrayer/HerzultForumBundle/tree/master"
+            }
         },
         {
             "name": "jms/aop-bundle",
@@ -1342,6 +1390,7 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "white-october/pagerfanta-bundle": 20
+        "white-october/pagerfanta-bundle": 20,
+        "herzult/forum-bundle": 20
     }
 }

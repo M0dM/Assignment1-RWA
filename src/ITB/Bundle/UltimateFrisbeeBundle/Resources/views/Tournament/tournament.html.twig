@@ -1,0 +1,31 @@
+{% extends '::base.html.twig' %}
+
+{% block javascript %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFtournament.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<h1>All tournaments</h1>
+	<ul class="nav nav-tabs">
+      <li class="active"><a href="{{path('uf_tournament')}}">All tournaments</a></li>
+      <li><a href="{{path('uf_tournament_calendar')}}">Tournaments by date</a></li>
+    </ul>
+	<table dataUrl="{{ asset('json/tournaments.json')}}" id="tournamentTable" class="table">
+		<thead>
+                <tr>
+                  <th>Name</th>
+				  <th>Date</th>
+                  <th>Country</th>
+                  <th>Location</th>
+                  <th>Surface</th>
+                  <th>Description</th>
+                </tr>
+        </thead>
+        <tbody>
+        	<tr>
+              <td>No tournaments availiable yet.</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

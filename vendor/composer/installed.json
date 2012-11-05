@@ -1356,5 +1356,54 @@
             "page",
             "paging"
         ]
+    },
+    {
+        "name": "herzult/forum-bundle",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "target-dir": "Herzult/Bundle/ForumBundle",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/benoitBrayer/HerzultForumBundle",
+            "reference": "5471f479f365acf9c4441e196916018192ca41a1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://github.com/benoitBrayer/HerzultForumBundle/zipball/5471f479f365acf9c4441e196916018192ca41a1",
+            "reference": "5471f479f365acf9c4441e196916018192ca41a1",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0",
+            "pagerfanta/pagerfanta": "*",
+            "white-october/pagerfanta-bundle": "*"
+        },
+        "time": "2012-08-27 00:34:30",
+        "type": "symfony-bundle",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Herzult\\Bundle\\ForumBundle": "."
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Antoine Hérault",
+                "email": "antoine.herault@gmail.com",
+                "homepage": "https://github.com/Herzult"
+            }
+        ],
+        "description": "A simple Symfony forum bundle.",
+        "homepage": "https://github.com/Herzult/HerzultForumBundle.git",
+        "keywords": [
+            "symfony",
+            "forum"
+        ],
+        "support": {
+            "source": "https://github.com/benoitBrayer/HerzultForumBundle/tree/master"
+        }
     }
 ]

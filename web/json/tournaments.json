@@ -1,0 +1,29 @@
+{
+    "tournaments":[
+               {
+                 "tournamentTitle":       "UKU South East University Mixed Indoor Regionals 2012",
+                 "date":        "11/17/2012",
+                 "country":     "England", 
+                 "location":    "Brighton",
+                 "surface":     "indor", 
+                 "description": "South East University Mixed Indoor Regionals is occurring on the 17th & 18th of November in Brighton Aldridge Community Academy, Brighton, BN1 9PW. This is the first call for entries. Please can Presidents or Captains from each institute get in touch with me reserving the number of spots they would like? The deadline for notifying us to ensure guaranteed entry, with the traditional preferences to 1st teams then 2nd teams etc. will be 26th October 2012. Payment details will be supplied once you get in touch and the payment deadline will be 5th November 2012."
+               },
+               {
+                 "tournamentTitle":       "Bingefest II",
+                 "date":        "12/01/2012",
+                 "country":     "Ireland", 
+                 "location":    "university college dublin Belfield campus",
+                 "surface":     "indor", 
+                 "description": "Bingefest will be running for its second year on December 1st & 2nd in the UCD sports halls. This year will see 16 teams compete in a fun mixed format. See the facebook page for more details! We are willing to accept some teams with a 'loose' mixed team, ie 1 girl on the line instead of two. However this is not ideal and we would hope all teams go with the spirit that this is a fun mixed tourtitlent and attempt to play 2 girls at all times."
+               },
+               {
+                 "tournamentTitle":       "Mix & Mingle 2013",
+                 "date":        "02/09/2013",
+                 "country":     "England", 
+                 "location":    "Ponds Forge International Sports Centre, Sheffield",
+                 "surface":     "indor", 
+                 "description": "Mix & Mingle 2013 is now officially open to entry, but be quick as places will go fast!! If you're a regular then you will know exactly what to expect, but with a few changes for the better (see below). If you've never played M&M before where have you been??!! Big tournament, big party, great costumes and a whole weekend of fun with an 80s theme!! Payment details will be shown when you submit the form but you likely won't hear from me until your payment has been received. You place will only be confirmed on receipt of your payment. Any questions, get in touch."
+               }
+           ]
+    
+}                           

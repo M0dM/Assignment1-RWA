@@ -19,8 +19,6 @@
         "jms/security-extra-bundle": "1.2.*",
         "jms/di-extra-bundle": "1.1.*",
         "friendsofsymfony/user-bundle": "*",
-        "white-october/pagerfanta-bundle": "dev-master",
-        "benoitBrayer/HerzultForumBundle": "*"
     },
     "scripts": {
         "post-install-cmd": [

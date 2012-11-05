@@ -133,6 +133,16 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\SportController::indexAction',  '_route' => 'uf_sport',);
         }
 
+        // uf_tournament
+        if ($pathinfo === '/tournaments') {
+            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\TournamentController::indexAction',  '_route' => 'uf_tournament',);
+        }
+
+        // uf_tournament_calendar
+        if ($pathinfo === '/tournaments/calendar') {
+            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\TournamentController::tournamentCalendarAction',  '_route' => 'uf_tournament_calendar',);
+        }
+
         // fos_user_security_login
         if ($pathinfo === '/login') {
             return array (  '_controller' => 'FOS\\UserBundle\\Controller\\SecurityController::loginAction',  '_route' => 'fos_user_security_login',);

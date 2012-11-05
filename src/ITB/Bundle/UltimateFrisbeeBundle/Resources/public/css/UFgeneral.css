@@ -62,3 +62,35 @@
 	width:100px;
 	height:27px;
 }
+
+.ui-datepicker-calendar{
+	background-color:white;
+	color:white;
+}
+
+#start{ 
+	background-color: #ccc;
+}
+.ui-wrapper{
+	background-color: #ccc;
+}
+
+#tournamentCalendarTable{
+	display:block;
+	float:left;
+}
+
+#calendarContent{
+	margin-left:0px;
+}
+
+#calendar{
+	display:block;
+	float:left;
+	margin:0px;
+	margin-right:25px;
+}
+
+#tableCalendar{
+	margin:0px;
+}

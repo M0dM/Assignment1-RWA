@@ -20,7 +20,6 @@ class AppKernel extends Kernel
             new JMS\DiExtraBundle\JMSDiExtraBundle($this),
             new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new ITB\Bundle\UltimateFrisbeeUserBundle\ITBUltimateFrisbeeUserBundle(),
             new ITB\Bundle\UltimateFrisbeeBundle\ITBUltimateFrisbeeBundle(),
         );

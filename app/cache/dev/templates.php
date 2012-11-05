@@ -111,6 +111,8 @@
   'ITBUltimateFrisbeeBundle:Contact:mapContact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Contact/mapContact.html.twig',
   'ITBUltimateFrisbeeBundle:Contact:documentContact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Contact/documentContact.html.twig',
   'ITBUltimateFrisbeeBundle:Contact:contact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Contact/contact.html.twig',
+  'ITBUltimateFrisbeeBundle:Tournament:tournament.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Tournament/tournament.html.twig',
+  'ITBUltimateFrisbeeBundle:Tournament:tournamentCalendar.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Tournament/tournamentCalendar.html.twig',
   'WebProfilerBundle:Profiler:layout.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/layout.html.twig',
   'WebProfilerBundle:Profiler:admin.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/admin.html.twig',
   'WebProfilerBundle:Profiler:header.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/header.html.twig',

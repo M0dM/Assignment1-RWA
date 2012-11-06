@@ -2,12 +2,12 @@
 
 {% block stylesheets %}
 	{{ parent() }}
-	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFimageRotator.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFhomePage.css') }}" />
 {% endblock %}
 
 {% block javascript %}
 	{{ parent() }}
-	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFimageRotator.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFhomePage.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -18,7 +18,22 @@
 			<li><a href="#"><img name="productsImage" src="{{ asset('images/image2.jpg') }}" alt="image accordion products"/></a></li>
 			<li><a href="#"><img name="forumImage" src="{{ asset('images/image3.jpg') }}" alt="image accordion forum"/></a></li>
 		</ul>
+		<div id="shoppingCartDivision">
+			<h4><i style="padding-bottom:5px; margin-right: 5px;"class="icon-shopping-cart"></i> Your shopping cart</h4>
+		</div>
 	</div>
-	<h1 class="titleUnderAccordion">TestPage : Test bootstrap</h1>
-	<a href="{{ path('uf_home') }}">Home Page</a>
+	
+	
+	<div id="tabs" style="clear:left; display:block;">
+	    <ul>
+	        <li><a href="#tabs-1">Informations</a></li>
+	        <li><a href="#tabs-2">Contact</a></li>
+	    </ul>
+	    <div id="tabs-1">
+	        <p>This website provide you some basic informations on ultimate frisbee like the the game rules and history you could discover on <a href="{{ path("uf_sport") }}" >the page devote to this sport</a>. You can also search for a tournament in <a href="{{path('uf_tournament')}}">the tournaments section</a>.</p>
+	    </div>
+	    <div id="tabs-2">
+	        <p>All the way to contact us are listed into our <a href="{{path('uf_contact')}}">contact page</a>.</p>
+	    </div>
+	</div>
 {% endblock %}

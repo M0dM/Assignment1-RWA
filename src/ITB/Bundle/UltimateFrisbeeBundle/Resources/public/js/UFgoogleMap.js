@@ -31,7 +31,7 @@ $("document").ready(function(){
     var contentString = 
     	  '<img style="display:block; float:left; width:200px; margin-right:10px;" src="' + imageLink + '" alt="logoUltimateFrisbeeShop"/>' +
     	  '<div style="display:block; float:left;">'+
-    	  	'<p><strong>Ultimate Frisbee Shop:</strong>' +
+    	  	'<p style="color:black;"><strong>Ultimate Frisbee Shop:</strong>' +
     		'<br />'+
     		'address : Ultimate frisbee shop'+
     		'<br />'+

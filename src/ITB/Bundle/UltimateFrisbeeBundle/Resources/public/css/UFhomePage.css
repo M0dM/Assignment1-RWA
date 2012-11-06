@@ -1,0 +1,60 @@
+.imageRotatorPlaceholder{
+	display:block;
+	position:relative;
+}
+
+#shoppingCartDivision{
+	display:block; 
+	z-index:-1;
+	padding: 10px;
+	border: 1px solid #adadad;
+	position:absolute; 
+	right:0px; 
+	top:0px; 
+	width:240px;
+	height:196px;
+	background-color: white;
+}
+
+#shoppingCartDivision h4{
+	border-bottom: 1px solid black;
+	color: black;
+	margin-left:5px;
+	margin-right:5px;
+	height: 30px;
+	margin-top:0px;
+	padding-top:5px;
+}
+
+.imageRotatorImageCurent{
+	border: 1px solid #adadad;
+	padding: 8px;
+	background-color:white;
+	position: relative;
+	z-index:-1;	
+	width: 650px;
+}
+
+.imageRotatorSmallImages img{
+	border: 1px solid #adadad;
+	display: block;
+	width: 200px;
+	float: left; 
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.imageRotatorSmallImages{
+	margin-top:-30px;
+	padding-left:25px;
+	position: relative;
+	z-index:2;
+}
+
+#tabs{
+	margin-top:15px;
+}
+
+#tabs p a{
+	color: #0073EA;
+}

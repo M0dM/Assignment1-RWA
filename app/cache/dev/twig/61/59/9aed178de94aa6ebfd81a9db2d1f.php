@@ -64,7 +64,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
         // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_tournament"), "html", null, true);
-        echo "\"><i class=\"icon-th-list\"></i> All tournaments</a></li>
+        echo "\"><i class=\"icon-list\"></i> All tournaments</a></li>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
         // line 40
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_tournament_calendar"), "html", null, true);

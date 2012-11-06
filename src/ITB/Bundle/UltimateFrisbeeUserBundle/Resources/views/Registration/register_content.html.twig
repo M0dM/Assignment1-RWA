@@ -12,7 +12,7 @@
 	</p>
 {% endif %}
 <form novalidate action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register form-horizontal">
-     <p clas="alert alert-danger span 6">
+     <p class="alert alert-danger span 6">
      {{ form_widget(form._token) }}
      {{ form_errors(form) }}
      </p>

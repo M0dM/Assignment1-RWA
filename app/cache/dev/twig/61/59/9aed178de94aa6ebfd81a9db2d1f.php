@@ -53,13 +53,13 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t\t\t\t    <li><a href=\"";
         // line 34
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_sport"), "html", null, true);
-        echo "\"><i class=\"icon-book\"></i> The sport</a></li>
+        echo "\"><i class=\"icon-book icon-white\"></i> The sport</a></li>
 \t\t\t\t\t    <li id=\"tournamentsMenuPlaceholder\">
 \t\t\t\t\t    \t<a href=\"";
         // line 36
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_tournament"), "html", null, true);
-        echo "\"><i class=\"icon-calendar\"></i> Tournaments</a>
-\t\t\t\t\t\t    <div>
+        echo "\"><i class=\"icon-calendar icon-white\"></i> Tournaments</a>
+\t\t\t\t\t\t    <div style=\"display:none;\">
 \t\t\t\t\t    \t\t<ul>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
         // line 39
@@ -72,62 +72,63 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t    </div>
 \t\t\t\t\t\t</li>
-\t\t\t\t\t    <li><a href=\"#\"><i class=\"icon-shopping-cart\"></i> Products</a></li>
+\t\t\t\t\t    <li><a href=\"#\"><i class=\"icon-shopping-cart icon-white\"></i> Products</a></li>
+\t\t\t\t\t\t<li><a href=\"";
+        // line 45
+        echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_gallery"), "html", null, true);
+        echo "\"><i class=\"icon-picture icon-white\"></i> Photos</a></li>
 \t\t\t\t\t    <li id=\"contactMenuPlaceholder\">
 \t\t\t\t\t\t    <a href=\"";
-        // line 46
+        // line 47
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_contact"), "html", null, true);
-        echo "\"><i class=\"icon-envelope\"></i> Contact</a>
-\t\t\t\t\t\t    <div>
+        echo "\"><i class=\"icon-envelope icon-white\"></i> Contact</a>
+\t\t\t\t\t\t    <div style=\"display:none;\">
 \t\t\t\t\t    \t\t<ul>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
-        // line 49
+        // line 50
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_contact"), "html", null, true);
         echo "\"><i class=\"icon-th-list\"></i> General informations</a></li>
 \t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t<a href=\"";
-        // line 51
+        // line 52
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_docView"), "html", null, true);
         echo "\"><i class=\"icon-file\"></i> Description file</a>
 \t\t\t\t\t\t\t\t\t\t<ul>
 \t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-        // line 53
+        // line 54
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("doc/document.docx"), "html", null, true);
         echo "\"><i class=\"icon-download\"></i> Download</a></li>
 \t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-        // line 54
+        // line 55
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_docView"), "html", null, true);
         echo "\"><i class=\"icon-eye-open\"></i> View</a></li>
 \t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t<li><a href=\"";
-        // line 57
+        // line 58
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_map"), "html", null, true);
         echo "\"><i class=\"icon-map-marker\"></i> Location</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t    </div>
 \t\t\t\t\t    </li>
 \t\t\t\t\t    ";
-        // line 61
+        // line 62
         if ($this->env->getExtension('security')->isGranted("ROLE_USER")) {
-            // line 62
-            echo "\t\t\t\t\t\t    <li id=\"logoutMenuPlaceholder\">
-\t\t\t\t\t\t    \t<a href=\"";
             // line 63
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_logout"), "html", null, true);
-            echo "\"><i class=\"icon-off\"></i> Logout</a>
-\t\t\t\t\t\t    \t<div>
+            echo "\t\t\t\t\t\t    <li id=\"logoutMenuPlaceholder\">
+\t\t\t\t\t\t    \t<a href=\"#\"><i class=\"icon-user icon-white\"></i> Account</a>
+\t\t\t\t\t\t    \t<div style=\"display:none;\">
 \t\t\t\t\t\t    \t\t<ul>
 \t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-            // line 66
+            // line 67
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_logout"), "html", null, true);
             echo "\"><i class=\"icon-off\"></i> Logout</a></li>
 \t\t\t\t\t\t    \t\t\t<li><a href=\"";
-            // line 67
+            // line 68
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_profile_show"), "html", null, true);
             echo "\"><i class=\"icon-user\"></i> My profile</a></li>
 \t\t\t\t\t\t    \t\t\t<li><a href=\"";
-            // line 68
+            // line 69
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_profile_edit"), "html", null, true);
             echo "\"><i class=\"icon-pencil\"></i> Edit profile</a></li>
 \t\t\t\t\t\t    \t\t</ul>
@@ -135,20 +136,17 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t\t\t\t\t    </li>
 \t\t\t\t\t\t";
         } else {
-            // line 73
-            echo "\t\t\t\t\t\t\t<li id=\"loginMenuPlaceholder\">
-\t\t\t\t\t\t\t\t<a href=\"";
             // line 74
-            echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_login"), "html", null, true);
-            echo "\"><i class=\"icon-ok\"></i> Login</a>
-\t\t\t\t\t\t\t    <div>
+            echo "\t\t\t\t\t\t\t<li id=\"loginMenuPlaceholder\">
+\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"icon-user icon-white\"></i> Account</a>
+\t\t\t\t\t\t\t    <div style=\"display:none;\">
 \t\t\t\t\t\t    \t\t<ul>
 \t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-            // line 77
+            // line 78
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_security_login"), "html", null, true);
             echo "\"><i class=\"icon-ok\"></i> Login</a></li>
 \t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-            // line 78
+            // line 79
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fos_user_registration_register"), "html", null, true);
             echo "\"><i class=\"icon-edit\"></i> Register</a></li>
 \t\t\t\t\t\t\t\t\t</ul>
@@ -156,7 +154,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t\t\t\t\t    </li>
 \t\t\t\t\t\t";
         }
-        // line 83
+        // line 84
         echo "\t\t\t\t\t    </ul>
 \t\t\t    </div>
 \t\t    </div>
@@ -165,15 +163,15 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t<div id=\"styleSwitcher\">
 \t\t\t<blockquote>
 \t\t\t";
-        // line 90
+        // line 91
         $this->displayBlock('styleswitcher', $context, $blocks);
-        // line 108
+        // line 109
         echo "\t\t\t</blockquote>
 \t\t</div>
 \t        ";
-        // line 110
-        $this->displayBlock('body', $context, $blocks);
         // line 111
+        $this->displayBlock('body', $context, $blocks);
+        // line 112
         echo "\t    </div>
     </body>
 </html>
@@ -249,13 +247,13 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
         ";
     }
 
-    // line 90
+    // line 91
     public function block_styleswitcher($context, array $blocks = array())
     {
-        // line 91
+        // line 92
         echo "\t\t\t\t<h4 id=\"titleStyleSwitcher\">Style switcher: </h4>
 \t\t\t\t<form id=\"formStyleSwitcher\" method=\"post\" class=\"form-inline\" action=\"";
-        // line 92
+        // line 93
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_home"), "html", null, true);
         echo "\">
 \t\t\t\t\t<label class=\"radio\">
@@ -275,7 +273,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 \t\t\t";
     }
 
-    // line 110
+    // line 111
     public function block_body($context, array $blocks = array())
     {
     }
@@ -292,6 +290,6 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  277 => 110,  257 => 92,  254 => 91,  251 => 90,  245 => 24,  241 => 23,  237 => 22,  232 => 21,  229 => 20,  212 => 15,  206 => 13,  200 => 11,  191 => 8,  188 => 7,  173 => 110,  167 => 90,  146 => 77,  97 => 54,  88 => 51,  60 => 16,  47 => 11,  38 => 26,  299 => 100,  293 => 96,  290 => 95,  287 => 94,  285 => 93,  280 => 90,  274 => 86,  271 => 85,  268 => 84,  266 => 83,  261 => 80,  247 => 79,  243 => 77,  228 => 75,  220 => 73,  218 => 17,  213 => 70,  209 => 69,  202 => 66,  196 => 63,  183 => 61,  181 => 60,  175 => 111,  158 => 83,  107 => 41,  101 => 34,  80 => 24,  63 => 16,  36 => 6,  156 => 58,  148 => 55,  142 => 50,  140 => 74,  127 => 45,  123 => 44,  115 => 63,  110 => 61,  85 => 28,  65 => 19,  59 => 16,  45 => 9,  103 => 57,  91 => 20,  74 => 22,  70 => 14,  66 => 12,  89 => 20,  82 => 19,  42 => 12,  223 => 18,  214 => 90,  210 => 88,  203 => 84,  199 => 83,  194 => 9,  192 => 62,  189 => 78,  187 => 77,  184 => 76,  178 => 72,  170 => 67,  157 => 61,  152 => 59,  145 => 53,  130 => 48,  125 => 67,  119 => 45,  116 => 44,  112 => 62,  102 => 36,  98 => 33,  76 => 4,  73 => 3,  69 => 19,  56 => 15,  32 => 11,  26 => 3,  22 => 1,  25 => 4,  23 => 3,  17 => 1,  92 => 39,  86 => 27,  77 => 46,  57 => 22,  29 => 6,  24 => 6,  19 => 2,  68 => 40,  61 => 24,  44 => 7,  20 => 2,  161 => 63,  153 => 50,  150 => 78,  147 => 51,  143 => 46,  137 => 73,  129 => 68,  121 => 66,  118 => 46,  113 => 39,  104 => 35,  99 => 33,  94 => 21,  81 => 18,  78 => 24,  72 => 16,  64 => 39,  53 => 34,  50 => 15,  48 => 32,  41 => 8,  39 => 7,  35 => 20,  33 => 7,  30 => 3,  27 => 2,  182 => 6,  176 => 71,  169 => 108,  163 => 58,  160 => 57,  155 => 56,  151 => 54,  149 => 52,  141 => 54,  136 => 47,  134 => 50,  131 => 43,  128 => 47,  120 => 37,  117 => 36,  114 => 35,  109 => 38,  106 => 37,  100 => 30,  96 => 34,  93 => 53,  90 => 28,  87 => 19,  83 => 49,  79 => 25,  71 => 19,  62 => 17,  58 => 36,  55 => 14,  52 => 13,  49 => 14,  46 => 13,  43 => 8,  40 => 7,  37 => 9,  34 => 5,  31 => 4,  28 => 7,);
+        return array (  275 => 111,  255 => 93,  252 => 92,  249 => 91,  239 => 23,  235 => 22,  230 => 21,  227 => 20,  221 => 18,  216 => 17,  204 => 13,  198 => 11,  186 => 7,  180 => 6,  173 => 112,  171 => 111,  167 => 109,  165 => 91,  144 => 78,  138 => 74,  126 => 68,  122 => 67,  97 => 54,  54 => 4,  51 => 3,  38 => 26,  299 => 100,  293 => 96,  290 => 95,  287 => 94,  285 => 93,  280 => 90,  274 => 86,  271 => 85,  268 => 84,  266 => 83,  261 => 80,  247 => 79,  243 => 24,  228 => 75,  220 => 73,  218 => 72,  213 => 70,  209 => 69,  202 => 66,  196 => 63,  183 => 61,  181 => 60,  175 => 58,  158 => 57,  107 => 58,  101 => 55,  80 => 24,  63 => 16,  36 => 6,  156 => 84,  148 => 79,  142 => 50,  140 => 50,  127 => 45,  123 => 44,  115 => 42,  110 => 42,  85 => 28,  65 => 19,  59 => 16,  45 => 9,  103 => 24,  91 => 20,  74 => 22,  70 => 14,  66 => 12,  89 => 20,  82 => 19,  42 => 12,  223 => 96,  214 => 90,  210 => 15,  203 => 84,  199 => 83,  194 => 80,  192 => 9,  189 => 8,  187 => 77,  184 => 76,  178 => 72,  170 => 67,  157 => 61,  152 => 59,  145 => 53,  130 => 69,  125 => 49,  119 => 45,  116 => 63,  112 => 43,  102 => 36,  98 => 33,  76 => 45,  73 => 23,  69 => 19,  56 => 12,  32 => 11,  26 => 3,  22 => 1,  25 => 4,  23 => 3,  17 => 1,  92 => 52,  86 => 27,  77 => 23,  57 => 22,  29 => 6,  24 => 6,  19 => 2,  68 => 40,  61 => 24,  44 => 7,  20 => 2,  161 => 63,  153 => 50,  150 => 49,  147 => 51,  143 => 46,  137 => 45,  129 => 42,  121 => 47,  118 => 46,  113 => 39,  104 => 35,  99 => 33,  94 => 21,  81 => 47,  78 => 24,  72 => 16,  64 => 39,  53 => 34,  50 => 15,  48 => 32,  41 => 7,  39 => 7,  35 => 20,  33 => 7,  30 => 3,  27 => 2,  182 => 70,  176 => 71,  169 => 62,  163 => 58,  160 => 57,  155 => 56,  151 => 54,  149 => 52,  141 => 54,  136 => 47,  134 => 50,  131 => 43,  128 => 47,  120 => 37,  117 => 36,  114 => 62,  109 => 38,  106 => 37,  100 => 30,  96 => 34,  93 => 33,  90 => 28,  87 => 50,  83 => 24,  79 => 25,  71 => 19,  62 => 17,  58 => 36,  55 => 14,  52 => 10,  49 => 14,  46 => 13,  43 => 8,  40 => 7,  37 => 9,  34 => 5,  31 => 4,  28 => 7,);
     }
 }

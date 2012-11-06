@@ -1,5 +1,10 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block fos_user_content %}
+<h1>Profile</h1>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="{{path('fos_user_profile_show')}}">Show</a></li>
+  <li><a href="{{path('fos_user_profile_edit')}}">Edit</a></li>
+</ul>
 {% include "FOSUserBundle:Profile:show_content.html.twig" %}
 {% endblock fos_user_content %}

@@ -15,6 +15,13 @@ $("document").ready(function(){
 	arrayTournaments = $.parseJSON(tournaments.responseText);
 	arrayTournaments = arrayTournaments.tournaments;
 	console.log(arrayTournaments);
+	
+	var SelectedDates = {};
+    $.each(arrayTournaments, function(i, l){
+    	console.log(arrayTournaments[i].date);
+    	SelectedDates[new Date(arrayTournaments[i].date)] = new Date(arrayTournaments[i].date);
+    });
+    
 
 	// Calendar creation
 	$("#calendar").datepicker(({ 
@@ -33,42 +40,16 @@ $("document").ready(function(){
     		   }
     	   });
        },
-		onChangeMonthYear: changeRowsColor(arrayTournaments)
+       beforeShowDay: function(date) {
+           var Highlight = SelectedDates[date];
+           console.log(SelectedDates[date]);
+           if (Highlight) {
+               return [true, "Highlighted", ''];
+           }
+           else {
+               return [true, '', ''];
+           }
+       }
     }));
-	
-	changeRowsColor(arrayTournaments);
 });
 
-function changeRowsColor(tournaments){
-	console.log('EXECUTION');
-	$("#calendar table td").each(function(i,l){
-		var currentTd = $(this);
-		$.each(tournaments, function(i,l){
-			
-			var tdMonth = parseInt(currentTd.attr('data-month'))+1+"";
-			var tournamentMonth = getMonth(tournaments[i].date)+"";
-			console.log(tournaments[i].date + " - " + tdMonth + " - " + tournamentMonth);
-			if(currentTd.attr('data-year') == getYear(tournaments[i].date) && tdMonth == tournamentMonth && currentTd.children("a:first").text() == getDay(tournaments[i].date)){
-				currentTd.children('a').css("color", "green");
-				alert(''+ currentTd.attr('data-year') + " - " + parseInt(currentTd.attr('data-month'))+1 +" - " + currentTd.children("a:first").text());
-				console.log(tdMonth);
-			}
-		});
-	});
-	console.log('EXECUTED');
-}
-
-function getYear(date){
-	var dateSplited = date.split('/');
-	return dateSplited[2];
-}
-
-function getMonth(date){
-	var dateSplited = date.split('/');
-	return dateSplited[0];
-}
-
-function getDay(date){
-	var dateSplited = date.split('/');
-	return dateSplited[1];
-}

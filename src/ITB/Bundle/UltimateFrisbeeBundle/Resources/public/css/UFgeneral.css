@@ -96,9 +96,9 @@
 }
 
 .Highlighted a{
-3	   background-color : Green !important;
-4	   background-image :none !important;
-5	   color: White !important;
-6	   font-weight:bold !important;
-7	   font-size: 12pt;
-8	}
+	   background-color : Green !important;
+	   background-image :none !important;
+	   color: White !important;
+	   font-weight:bold !important;
+	   font-size: 12pt;
+}

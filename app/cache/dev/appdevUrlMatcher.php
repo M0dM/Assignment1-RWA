@@ -133,6 +133,11 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\GalleryController::indexAction',  '_route' => 'uf_gallery',);
         }
 
+        // uf_shop
+        if ($pathinfo === '/shop') {
+            return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\ShopController::indexAction',  '_route' => 'uf_shop',);
+        }
+
         // uf_sport
         if ($pathinfo === '/sport/presentation') {
             return array (  '_controller' => 'ITB\\Bundle\\UltimateFrisbeeBundle\\Controller\\SportController::indexAction',  '_route' => 'uf_sport',);

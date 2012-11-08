@@ -111,6 +111,7 @@
   'ITBUltimateFrisbeeUserBundle:Profile:edit.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeUserBundle/Resources/views/Profile/edit.html.twig',
   'ITBUltimateFrisbeeUserBundle:Profile:edit_content.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeUserBundle/Resources/views/Profile/edit_content.html.twig',
   'ITBUltimateFrisbeeBundle:Sport:presentation.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Sport/presentation.html.twig',
+  'ITBUltimateFrisbeeBundle:Shop:index.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Shop/index.html.twig',
   'ITBUltimateFrisbeeBundle:Home:index.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Home/index.html.twig',
   'ITBUltimateFrisbeeBundle:Contact:mapContact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Contact/mapContact.html.twig',
   'ITBUltimateFrisbeeBundle:Contact:documentContact.html.twig' => '/var/www/RWA/Assignment1/Assignment1-RWA/src/ITB/Bundle/UltimateFrisbeeBundle/Resources/views/Contact/documentContact.html.twig',

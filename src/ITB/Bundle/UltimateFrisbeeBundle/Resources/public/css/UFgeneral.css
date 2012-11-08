@@ -94,3 +94,11 @@
 #tableCalendar{
 	margin:0px;
 }
+
+.Highlighted a{
+3	   background-color : Green !important;
+4	   background-image :none !important;
+5	   color: White !important;
+6	   font-weight:bold !important;
+7	   font-size: 12pt;
+8	}

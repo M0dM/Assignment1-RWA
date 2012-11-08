@@ -20,7 +20,7 @@ jQuery.fn.generateSubMenu = function(){
     	/* mouse on the menu item element chosed */
     		
     		//position relative on the navbar item
-    		$(this).css('position', 'relative');
+    		$(this).css('position', 'relative').css('z-index', "999");
     		
     		$(this).children("div").css("display", "block")
     					   .css('position', 'absolute')

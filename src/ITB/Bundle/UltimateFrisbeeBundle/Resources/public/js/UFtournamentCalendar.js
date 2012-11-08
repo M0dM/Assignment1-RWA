@@ -1,54 +1,61 @@
+var arrayTournaments = [ ];
+
 $("document").ready(function(){
-	// Variable declaration
-	var tournaments = [ ];
-	
+
+	// Retrieve tournaments from json file
+	var tournaments = $.ajax({
+					        url: $("#tournamentCalendarTable").attr("dataUrl"),
+					        dataType: 'json',
+					        cache: false,
+					        async: false,
+					        success: function(data){
+					            	return data.tournaments;
+					        }
+					    });
+	arrayTournaments = $.parseJSON(tournaments.responseText);
+	arrayTournaments = arrayTournaments.tournaments;
+	console.log(arrayTournaments);
+
 	// Calendar creation
 	$("#calendar").datepicker(({ 
        onSelect: function(date) { 
     	   $("#tournamentCalendarTable tbody tr").remove();
-    	   $.each(tournaments, function(i, l){
-    		   if(tournaments[i].date == date){
+    	   $.each(arrayTournaments, function(i, l){
+    		   if(arrayTournaments[i].date == date){
     			   $("#tournamentCalendarTable tbody").append("<tr></tr>");
                    $("#tournamentCalendarTable tbody tr:last").append("<td>"
-	                    		 						+ tournaments[i].tournamentTitle +"</td><td>"
-	                    		 						+ tournaments[i].date +"</td><td>"
-	                    		 						+ tournaments[i].country +"</td><td>"
-	                    		 						+ tournaments[i].location +"</td><td>"
-	                    		 						+ tournaments[i].surface +"</td><td>"+ 
-	                    		 						tournaments[i].description +"</td>");
+	                    		 						+ arrayTournaments[i].tournamentTitle +"</td><td>"
+	                    		 						+ arrayTournaments[i].date +"</td><td>"
+	                    		 						+ arrayTournaments[i].country +"</td><td>"
+	                    		 						+ arrayTournaments[i].location +"</td><td>"
+	                    		 						+ arrayTournaments[i].surface +"</td><td>"+ 
+	                    		 						arrayTournaments[i].description +"</td>");
     		   }
     	   });
-    	   changeRowsColor(tournaments);
        },
-	   onChangeMonthYear: function(year, month) {
-		   changeRowsColor(tournaments);
-	   }
+		onChangeMonthYear: changeRowsColor(arrayTournaments)
     }));
-		
-	// Retrieve tournaments from json file
-	$.ajax({
-        url: $("#tournamentCalendarTable").attr("dataUrl"),
-        dataType: 'json',
-        cache: false,
-        success: function(data){
-            $.each(data.tournaments, function(index) {
-            	tournaments[index] = data.tournaments[index];
-            });
-            changeRowsColor(tournaments);
-          }
-    });
+	
+	changeRowsColor(arrayTournaments);
 });
 
 function changeRowsColor(tournaments){
 	console.log('EXECUTION');
-	$("#calendar td").each(function(i,l){
+	$("#calendar table td").each(function(i,l){
 		var currentTd = $(this);
 		$.each(tournaments, function(i,l){
-			if(currentTd.attr('data-year') == getYear(tournaments[i].date) && parseInt(currentTd.attr('data-month'))+1 == getMonth(tournaments[i].date) && currentTd.children("a:first").text() == getDay(tournaments[i].date)){
+			
+			var tdMonth = parseInt(currentTd.attr('data-month'))+1+"";
+			var tournamentMonth = getMonth(tournaments[i].date)+"";
+			console.log(tournaments[i].date + " - " + tdMonth + " - " + tournamentMonth);
+			if(currentTd.attr('data-year') == getYear(tournaments[i].date) && tdMonth == tournamentMonth && currentTd.children("a:first").text() == getDay(tournaments[i].date)){
 				currentTd.children('a').css("color", "green");
+				alert(''+ currentTd.attr('data-year') + " - " + parseInt(currentTd.attr('data-month'))+1 +" - " + currentTd.children("a:first").text());
+				console.log(tdMonth);
 			}
 		});
 	});
+	console.log('EXECUTED');
 }
 
 function getYear(date){

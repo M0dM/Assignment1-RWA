@@ -24,7 +24,10 @@
 	position:absolute;
 	bottom:30px;
 	left:70px;
-	width:300px;
-	height:300px;
+	width:250px;
+	height:250px;
+	padding:5px;
+	background-color:#adadad;
+	border:1px solid white;
 	z-index:1;
 }

@@ -3,11 +3,13 @@
 {% block stylesheets %}
 	{{ parent() }}
 	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFhomePage.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFimageRotator.css') }}" />
 {% endblock %}
 
 {% block javascript %}
 	{{ parent() }}
 	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFhomePage.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFimageRotator.js') }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -18,13 +20,16 @@
 			<li><a href="#"><img name="productsImage" src="{{ asset('images/image2.jpg') }}" alt="image accordion products"/></a></li>
 			<li><a href="#"><img name="forumImage" src="{{ asset('images/image3.jpg') }}" alt="image accordion forum"/></a></li>
 		</ul>
-		<div id="shoppingCartDivision">
-			<h4><i style="padding-bottom:5px; margin-right: 5px;"class="icon-shopping-cart"></i> Your shopping cart</h4>
-			    <!-- <dl class="dl-horizontal"> -->
-				<!--	<dt></dt> -->
-				<!--	<dd>...</dd> -->
-				<!-- </dl> -->
-				<p>No items in your shopping car yet.</p>
+		<div id="imRotator">
+				<h4>Our products</h4>
+				<div id="photoShow">
+			        <div class="current">
+			            <img src="{{ asset('images/imageRotator1.jpg') }}" width="150" height="150" alt="Photo image rotator" class="gallery" />
+			        </div>
+			        <div>
+			            <img src="{{ asset('images/imageRotator2.jpg') }}" width="150" height="150" alt="Photo image rotator" class="gallery" />
+			        </div>
+			    </div>
 		</div>
 	</div>
 	

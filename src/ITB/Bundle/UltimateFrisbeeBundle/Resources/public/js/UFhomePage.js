@@ -12,7 +12,7 @@ $("document").ready(function(){
 	var urls= [ ];
 	
 	// Getting all the links for the images
-	$(".imageRotatorPlaceholder img").each(function(index){
+	$(".imageRotatorPlaceholder ul img").each(function(index){
 		links[index] = $(this).attr("src");
 		names[index] = $(this).attr("name");
 		urls[index] = $(this).attr("href");

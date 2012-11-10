@@ -3,7 +3,7 @@
 	position:relative;
 }
 
-#shoppingCartDivision{
+#imRotator{
 	display:block; 
 	z-index:-1;
 	padding: 10px;
@@ -16,7 +16,7 @@
 	background-color: white;
 }
 
-#shoppingCartDivision h4{
+#imRotator h4{
 	border-bottom: 1px solid black;
 	color: black;
 	margin-left:5px;

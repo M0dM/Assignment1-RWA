@@ -4,6 +4,7 @@ namespace ITB\Bundle\UltimateFrisbeeBundle\Entity;
 
 use FOS\UserBundle\Entity\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -17,11 +18,17 @@ class User extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
+    
+    /**
+     * @ORM\ManyToMany(targetEntity="Item", mappedBy="users", cascade={"persist"})
+     */
+    private $items;
+    
     public function __construct()
     {
         parent::__construct();
         // your own logic
+        $this->items = new ArrayCollection();
     }
     
     /**

@@ -41,7 +41,17 @@
 								</ul>
 						    </div>
 						</li>
-					    <li><a href="#"><i class="icon-shopping-cart icon-white"></i> Products</a></li>
+						<li id="shopMenuPlaceholder">
+						    <a href="{{ path('uf_shop') }}"><i class="icon-shopping-cart icon-white"></i> Products</a>
+						    <div style="display:none;">
+					    		<ul>
+				    				<li><a href="{{path('uf_shop')}}"><i class="icon-shopping-cart"></i> Shop</a></li>
+					    			{% if is_granted('ROLE_ADMIN') %}
+					    			<li><a href="{{path('uf_admin')}}"><i class="icon-cog"></i><strong> Admin</strong></a></li>
+									{% endif %}
+								</ul>
+						    </div>
+					    </li>
 						<li><a href="{{ path('uf_gallery') }}"><i class="icon-picture icon-white"></i> Photos</a></li>
 					    <li id="contactMenuPlaceholder">
 						    <a href="{{path('uf_contact')}}"><i class="icon-envelope icon-white"></i> Contact</a>

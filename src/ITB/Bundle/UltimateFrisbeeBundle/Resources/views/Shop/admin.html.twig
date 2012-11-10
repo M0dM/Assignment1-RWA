@@ -1,0 +1,42 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	<h1>Add product</h1>
+	<br />
+		<form action="{{ path('uf_admin') }}" method="post" {{ form_enctype(form) }} class="form-horizontal" novalidate>
+			{{ form_widget(form._token) }}
+			<fieldset>
+				<div class="control-group">
+					<label class="control-label" for="inputName">Name</label>
+					<div class="controls">
+						{{ form_errors(form.name) }}
+						{{ form_widget(form.name) }}
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputDescription">Description</label>
+					<div class="controls">
+						{{ form_errors(form.description) }}
+						{{ form_widget(form.description) }}
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputImage">Image link</label>
+					<div class="controls">
+						{{ form_errors(form.image) }}
+						{{ form_widget(form.image) }}
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="inputPrice">Price</label>
+					<div class="controls">
+						{{ form_errors(form.price) }}
+						{{ form_widget(form.price) }}
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary">Save product</button>
+				</div>
+			</fieldset>
+		</form>
+{% endblock %}

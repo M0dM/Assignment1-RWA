@@ -1,0 +1,15 @@
+.horizontal {
+  float: left;
+  list-style: none;
+  margin: 10px;
+}
+
+.sub-level {
+  background: #ccc;
+  padding:5px;
+}
+
+.productName{
+	font-weight:bold;
+	font-size:20px;
+}

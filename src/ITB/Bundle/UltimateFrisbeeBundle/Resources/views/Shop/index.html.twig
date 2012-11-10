@@ -1,5 +1,28 @@
 {% extends '::base.html.twig' %}
 
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="{{ asset('bundles/itbultimatefrisbee/css/UFhorizontalList.css') }}" />
+{% endblock %}
+
+{% block javascript %}
+	{{ parent() }}
+	<script type="text/javascript" src="{{ asset('bundles/itbultimatefrisbee/js/UFhorizontalList.js') }}"></script>
+{% endblock %}
+
 {% block body %}
-	<h1>Shop</h1>
+<h1>Shop</h1>
+<ul id="selected-product">
+  {% for product in products %}
+        <li><p class="productName">{{ product.name }}</p>
+			<ul>
+		    	<li>Price: {{ product.price }}€</li>
+		    	<li>Description: {{ product.description }}</li>
+		    	<li class="image">Image: <a href="{{ asset ('images/' ~ product.image)}}">image</a></li>
+		    </ul>
+        </li>
+  {% endfor %}
+</ul>
+
+	
 {% endblock %}

@@ -13,10 +13,16 @@
       <li class="active"><a href="{{path("uf_map")}}">Location</a></li>
     </ul>
 	<h2>Itinerary generator</h2>
+	<div id="travelMode">
+			<p style="display:block; float:left;">By car</p>
+			<input style="display:block; float:left;" type="radio" name="optionsTravelMode" value="car" checked>
+			<p style="display:block; float:left;">By foot</p>
+			<input style="display:block; float:left;" type="radio" name="optionsTravelMode" value="walk">
+	</div>
 	<div id="control_panel" style="display:block;width:30px;text-align:left;padding-top:20px; margin-bottom:30px">
 		<form class="form-horizontal">
-		    <div class="control-group">
-				<label class="control-label" for="inputAddress">Your address</label>
+			<div class="control-group">
+				<label class="control-label" for="start">Your address</label>
 				<div class="controls">
 					<input type="text" id="start" class="span8" placeholder="Address">
 				</div>

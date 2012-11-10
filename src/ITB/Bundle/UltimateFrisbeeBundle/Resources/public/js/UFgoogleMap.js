@@ -28,6 +28,20 @@ $("document").ready(function(){
 	   title:"Ultimate Frisbee shop"
 	});
     
+    //create a circle 
+    var ItbCircle = {
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.2,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35,
+            map: map,
+            center: shop,
+            radius: 60
+    };
+    
+    new google.maps.Circle(ItbCircle);
+    
     var contentString = 
     	  '<img style="display:block; float:left; width:200px; margin-right:10px;" src="' + imageLink + '" alt="logoUltimateFrisbeeShop"/>' +
     	  '<div style="display:block; float:left;">'+
@@ -64,11 +78,20 @@ $("document").ready(function(){
   
   function calcRoute() {
     var start = document.getElementById('start').value;
+    var travelMode;
+    var travelModeValue = $("input:radio[name=optionsTravelMode]:checked").val();
+    if(travelModeValue == 'car'){
+    	travelMode = google.maps.TravelMode.DRIVING;
+    }
+    else{
+    	travelMode = google.maps.TravelMode.WALKING;
+    }
+
     var end = itbRoad;
     var request = {
         origin: start,
         destination: end,
-        travelMode: google.maps.TravelMode.DRIVING
+        travelMode: travelMode
     };
     directionsService.route(request, function(response, status) {
     	if (status == google.maps.DirectionsStatus.OK) {
@@ -76,7 +99,7 @@ $("document").ready(function(){
           directionsDisplay.setDirections(response);
           }
         else{
-        	alert("Status problem");
+        	alert("Unable to find the direction");
         }
       });
   }

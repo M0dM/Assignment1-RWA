@@ -275,7 +275,7 @@ class __TwigTemplate_61599aed178de94aa6ebfd81a9db2d1f extends Twig_Template
     public function block_styleswitcher($context, array $blocks = array())
     {
         // line 102
-        echo "\t\t\t\t<h4 id=\"titleStyleSwitcher\">Style switcher: </h4>
+        echo "\t\t\t\t<h4 id=\"titleStyleSwitcher\">Themeroller css: </h4>
 \t\t\t\t<form id=\"formStyleSwitcher\" method=\"post\" class=\"form-inline\" action=\"";
         // line 103
         echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("uf_home"), "html", null, true);

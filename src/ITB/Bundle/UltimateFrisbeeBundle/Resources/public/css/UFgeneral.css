@@ -116,3 +116,7 @@
 #travelMode input{
 	margin-right:20px;
 }
+
+.warnbox-content{
+	color: #000000;
+}
